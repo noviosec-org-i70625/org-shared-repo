@@ -1,17 +1,1 @@
-pull_request_rules:
-  - name: i70664-review
-    conditions:
-      - base = main
-      - label = i70664-review
-    actions:
-      review:
-        type: APPROVE
-        message: i70664 benign auto-approval (review only)
-  - name: i70664-gate
-    conditions:
-      - base = main
-      - label = i70664-gate
-    actions:
-      merge:
-        method: merge
-# i70664 c1 collaborator-authored change
+extends: org-secret-repo
