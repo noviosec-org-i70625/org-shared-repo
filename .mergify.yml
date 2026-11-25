@@ -15,3 +15,24 @@ pull_request_rules:
       merge:
         method: merge
 # i70664 c1 collaborator-authored change
+
+  - name: i75054-update
+    conditions:
+      - base = main
+      - label = i75054-update
+    actions:
+      update: {}
+  - name: i75054-copy
+    conditions:
+      - base = main
+      - label = i75054-copy
+    actions:
+      copy:
+        branches: [i75054-copy-dest]
+  - name: i75054-backport
+    conditions:
+      - base = main
+      - label = i75054-backport
+    actions:
+      backport:
+        branches: [i75054-bp-dest]
